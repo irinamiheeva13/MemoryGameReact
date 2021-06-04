@@ -1,0 +1,31 @@
+.card {
+  width: 165px;
+  height: 260px;
+  background: #5a5a5a;
+  border-radius: 30px;
+  box-shadow: -13px 5px 4px rgba(67, 67, 67, 0.72);
+  cursor: pointer;
+  position: relative;
+  transform: perspective(1000px) rotateY(var(--rotate-y, 0));
+  transform-style: preserve-3d;
+  transition: 700ms;
+}
+
+.card.flip {
+  --rotate-y: 180deg;
+}
+
+.card .front,
+.card .back {
+  position: absolute;
+}
+
+.card .back {
+  transform: rotateY(180deg);
+}
+
+.icon {
+  margin: 100px 53px 100px 53px;
+  width: 60px;
+  height: 60px;
+}
